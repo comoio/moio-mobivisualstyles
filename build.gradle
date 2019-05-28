@@ -25,3 +25,18 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion 17
+    buildToolsVersion '24.0.0'
+}
+
+dependencies {
+    compile files('app/libs/mysql-connector-java-8.0.16.jar')
+}
+apply plugin: 'maven'
+
